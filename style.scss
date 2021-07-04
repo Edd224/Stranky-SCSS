@@ -1,0 +1,137 @@
+
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/functions";
+
+
+
+
+
+
+
+
+
+
+
+body
+{
+    background-color: $body-background;
+    @include container;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+header
+{
+
+
+    img 
+    {
+       position: absolute;
+       display: block;
+    }
+
+    height: $header-height;
+    @include header-footer-style;
+    
+
+    h1 
+    {
+        margin-top: 0;
+        line-height: $header-height;
+    }
+
+
+
+}
+
+
+main
+{
+    // background-image: url(img/uvod_2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+
+
+
+.about-us
+{
+    h2, p 
+    {
+        color: $textColor;
+        text-align: center;
+    }
+
+}
+
+
+.reference-row
+{
+    @include theme-box;
+    display: inline-block;
+
+
+
+    img
+    {
+        display: block;
+        margin:  0 auto; 
+    }
+
+
+
+    a
+    {
+        text-align: center;
+        display: block;
+        width: 100px;
+        margin: 10px auto;
+        @include button;
+
+
+
+        &:hover
+        {
+            background: lighten($header-footer-background, $amount: 20%);
+        }
+
+    }
+    
+
+    
+    
+        
+    
+}
+
+
+
+footer
+{
+  height: $footer-height;
+  @include header-footer-style;
+}
+
+footer a{
+    @include button;
+
+    &:hover
+    {
+        background: lighten($header-footer-background, $amount: 20%);
+    }
+
+}
